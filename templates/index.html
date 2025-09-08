@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>AI Science Q/A</title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}"/>
+    </head>
+    <body>
+        <div class="container">
+            <h1>AI Powered Scientific QA</h1>
+            <p class="description">
+                Enter a question and it's multiple-choice options, and our model will predict the correct answer.
+            </p>
+            <form id="qa-form">
+                <div class="form-group">
+                    <label for="question">Question</label>
+                    <textarea id="question" name="question" rows="4" required></textarea>
+                </div>
+                 
+                <div class="option-group">
+                <div class="form-group">
+                    <label for="option1">Option 1</label>
+                    <input type="text" id="option1" name="option1" required/>
+                </div>
+
+                <div class="form-group">
+                    <label for="option2">Option 2</label>
+                    <input type="text" id="option2" name="option2" required/>
+                </div>
+
+                <div class="form-group">
+                    <label for="option3">Option 3</label>
+                    <input type="text" id="option3" name="option3" required/>
+                </div>
+
+                <div class="form-group">
+                    <label for="option4">Option 4</label>
+                    <input type="text" id="option4" name="option4" required/>
+                </div>
+                </div>
+                
+                <div class="button-container">
+                    <button type="submit" id="submit-btn">
+                        Predict Correct Answer
+                    </button>
+                </div>
+            </form>
+
+            <div id="result-container" class="result-container hidden">
+                <div class="result-card">
+                    <h3>Prediction</h3>
+                    <p id="prediction-text"></p>
+                    <div id="all-scored"></div>
+                </div>
+            </div>
+
+            <div id="message-box" class="message-box hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="message-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.14 0 2.062-.922 2.062-2.062V6.062C21.062 4.922 20.14 4 19 4H5c-1.14 0-2.062.922-2.062 2.062v11.876c0 1.14.922 2.062 2.062 2.062z" />
+            </svg>
+            <span id="message-text"></span>
+            </div>
+        </div>
+        <script src="static/script.js"></script>
+        
+    </body>
+</html>

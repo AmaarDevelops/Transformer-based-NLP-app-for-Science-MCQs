@@ -19,6 +19,7 @@ import joblib
 
 
 model = SentenceTransformer('paraphrase-MiniLM-L3-v2')
+model.save('paraphrase-MiniLM-L3-v2')
 
 def get_semantic_similarity(question,option):
     embeddings = model.encode([question,option])

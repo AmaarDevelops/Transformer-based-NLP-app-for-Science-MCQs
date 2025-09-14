@@ -19,7 +19,8 @@ CORS(app)
 try:
     best_model = joblib.load('best_model.joblib')
     vectorizer = joblib.load('vectorizer.joblib')
-    st_model = SentenceTransformer('all-MiniLM-L6-v2')
+    st_model = SentenceTransformer('./paraphrase-MiniLM-L3-v2')
+    
     print('Models Loaded Successfully.....')
 except OSError as e:
     print(f'An error occurred while loading models: {e}')

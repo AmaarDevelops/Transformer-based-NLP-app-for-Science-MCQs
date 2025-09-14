@@ -1,0 +1,10 @@
+Flask
+Flask-Cors
+joblib
+numpy
+seaborn
+matplotlib
+scikit-learn
+nltk
+sentence-transformers
+gunicorn
